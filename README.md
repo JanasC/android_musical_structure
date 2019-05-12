@@ -1,4 +1,4 @@
-# Android Tour Guide app
+# Musical structure app
 Musical structure app for Udacity Android Basics Nanodegree Program by Google. 
 
 # Description
