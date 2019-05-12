@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ PROJECT LICENSE
+  ~
+  ~ This project was submitted by Janas Chatkevicius as part of the Nanodegree At Udacity.
+  ~
+  ~ As part of Udacity Honor code, your submissions must be your own work, hence
+  ~ submitting this project as yours will cause you to break the Udacity Honor Code
+  ~ and the suspension of your account.
+  ~
+  ~ Me, the author of the project, allow you to check the code as a reference, but if
+  ~ you submit it, it's your own responsibility if you get expelled.
+  ~
+  ~ Copyright (c) 2018 Janas Chatkevicius
+  ~
+  ~ Besides the above notice, the following license applies and this license notice
+  ~ must be included in all works derived from this project.
+  ~
+  ~ MIT License
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CategoriesActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/welcome_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:padding="10dp"
+            android:text="@string/welcome_text_view_string"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:fontFamily="@font/montserrat" />
+
+        <TextView
+            android:id="@+id/classical_text_view"
+            style="@style/CategoryTextView"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/custom_text_view"
+            android:text="@string/classical_text_view_string"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@id/jazz_text_view"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/welcome_text_view"
+            tools:fontFamily="@font/montserrat" />
+
+        <TextView
+            android:id="@+id/jazz_text_view"
+            style="@style/CategoryTextView"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/custom_text_view"
+            android:text="@string/jazz_text_view_string"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/classical_text_view"
+            app:layout_constraintTop_toBottomOf="@id/welcome_text_view"
+            tools:fontFamily="@font/montserrat" />
+
+        <TextView
+            android:id="@+id/hiphop_text_view"
+            style="@style/CategoryTextView"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/custom_text_view"
+            android:text="@string/hiphop_text_view_string"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@id/pop_text_view"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/classical_text_view"
+            tools:fontFamily="@font/montserrat" />
+
+        <TextView
+            android:id="@+id/pop_text_view"
+            style="@style/CategoryTextView"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/custom_text_view"
+            android:text="@string/pop_text_view_string"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/hiphop_text_view"
+            app:layout_constraintTop_toBottomOf="@id/jazz_text_view"
+            tools:fontFamily="@font/montserrat" />
+
+        <TextView
+            android:id="@+id/rock_text_view"
+            style="@style/CategoryTextView"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/custom_text_view"
+            android:text="Rock"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@id/blues_text_view"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hiphop_text_view"
+            tools:fontFamily="@font/montserrat" />
+
+        <TextView
+            android:id="@+id/blues_text_view"
+            style="@style/CategoryTextView"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/custom_text_view"
+            android:text="@string/blues_text_view_string"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/rock_text_view"
+            app:layout_constraintTop_toBottomOf="@id/pop_text_view"
+            tools:fontFamily="@font/montserrat" />
+
+        <TextView
+            android:id="@+id/techno_text_view"
+            style="@style/CategoryTextView"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/custom_text_view"
+            android:text="@string/techno_text_view_string"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@id/reggae_text_view"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rock_text_view"
+            tools:fontFamily="@font/montserrat" />
+
+        <TextView
+            android:id="@+id/reggae_text_view"
+            style="@style/CategoryTextView"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/custom_text_view"
+            android:text="@string/reggae_text_view_string"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/techno_text_view"
+            app:layout_constraintTop_toBottomOf="@id/blues_text_view"
+            tools:fontFamily="@font/montserrat" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
